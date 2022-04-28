@@ -10,6 +10,7 @@ pandas = "*"
 sqlalchemy = "*"
 pyodbc = "*"
 pymysql = "*"
+numpy = "*"
 
 [dev-packages]
 
