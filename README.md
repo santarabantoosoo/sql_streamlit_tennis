@@ -1,1 +1,1 @@
-# sql_streamlit_tennis
+# streamlit_sql_project
