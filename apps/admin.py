@@ -16,10 +16,6 @@ def app():
     c = conn.cursor()
 
 
-    def add_data(TName, TourCountry, TourRank):
-        c.execute('CALL add_tournament(?,?,?)', (TName, TourCountry, TourRank))
-        conn.commit()
-
     def view_all_notes():
         c.execute('SELECT * FROM blogtable')
         data = c.fetchall()
@@ -58,4 +54,14 @@ def app():
         if st.button('Add'):
             c.execute('CALL add_tournament(TName, TourCountry, TourRank)')
             st.success('Tournament:{} added'.format(TName))
-		
+   
+
+    elif choice == "Update match":
+        st.subheader("Update match")
+
+		# unique_titles = [i[0] for i in view_all_titles()]
+		# delete_match_by_ID = st.selectbox("Unique match ID",unique_ID)
+		# # new_df = clean_db
+		# # if st.button("Delete"):
+		# # 	delete_data(delete_blog_by_title)
+		# 	st.warning("Deleted: '{}'".format(delete_blog_by_title))
